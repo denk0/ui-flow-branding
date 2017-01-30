@@ -8,11 +8,21 @@
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
   <body>
+    
+    {{#unlesspage 'home'}}
+      {{#unlesspage 'login'}}
+        {{> header}}  
+      {{/unlesspage}}
+    {{/unlesspage}}
 
-    {{> header}}
+    {{#ifpage 'home'}}
+      {{> header-home}}
+    {{/ifpage}}
+
     {{#ifequal breadcrumbs true}}
       {{> breadcrumbs}}
     {{/ifequal}}
+
     <div class="content">
       {{#ifpage 'project-main'}}
         <div class="secondary-navigation">
@@ -23,6 +33,7 @@
         {{> body}}
       </main>
     </div>
+    
     {{> footer}}
 
     <script src="{{root}}assets/js/app.js"></script>

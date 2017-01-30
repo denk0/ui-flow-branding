@@ -1,0 +1,8 @@
+body, html {
+	min-height: 100%;
+}
+body {
+	@include breakpoint(medium) {
+		padding-bottom: 108px;	
+	}
+}
