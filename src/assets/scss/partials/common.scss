@@ -6,3 +6,18 @@ body {
 		padding-bottom: 108px;	
 	}
 }
+
+.window-centered {
+	position: absolute;
+	top: calc(50% - 108px);
+	left: 0;
+	right: 0;
+	transform: translateY(-50%);
+}
+
+// login page styles
+.login-form {
+	@include breakpoint(medium) {
+		// margin-top: 25vh;
+	}
+}
