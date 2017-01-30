@@ -1,10 +1,10 @@
 body, html {
-	min-height: 100%;
+	height: 100%;
 }
-body {
-	@include breakpoint(medium) {
-		padding-bottom: 108px;	
-	}
+.content {
+	min-height: calc(100% - 108px);
+	height: auto !important;
+	height: 100%;
 }
 
 .window-centered {
@@ -15,9 +15,6 @@ body {
 	transform: translateY(-50%);
 }
 
+
 // login page styles
-.login-form {
-	@include breakpoint(medium) {
-		// margin-top: 25vh;
-	}
-}
+
