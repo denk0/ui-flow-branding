@@ -7,7 +7,7 @@
     <title>UI Flow Branding - {{title}}</title>
     <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
-  <body>
+  <body class="{{page}}">
     
     {{#unlesspage 'home'}}
       {{#unlesspage 'login'}}
@@ -19,10 +19,6 @@
       {{> header-home}}
     {{/ifpage}}
 
-    {{#ifequal breadcrumbs true}}
-      {{> breadcrumbs}}
-    {{/ifequal}}
-
     <div class="content">
       {{#ifpage 'project-main'}}
         <div class="secondary-navigation">
@@ -30,6 +26,9 @@
         </div>
       {{/ifpage}}
       <main class="main-content">
+        {{#ifequal breadcrumbs true}}
+          {{> breadcrumbs}}
+        {{/ifequal}}
         {{> body}}
       </main>
     </div>

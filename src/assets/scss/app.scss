@@ -50,8 +50,11 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-@import 'partials/common';
-@import 'partials/home';
-@import 'partials/header';
-@import 'partials/footer';
+@import 'components/foundation-icons';
+@import 'components/common';
+@import 'components/header';
+@import 'components/footer';
+
+@import 'components/home';
+@import 'components/project-single';
 

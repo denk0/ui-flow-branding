@@ -5,6 +5,7 @@ body, html {
 	min-height: calc(100% - 108px);
 	height: auto !important;
 	height: 100%;
+	position: relative;
 }
 
 .window-centered {
@@ -15,6 +16,4 @@ body, html {
 	transform: translateY(-50%);
 }
 
-
 // login page styles
-
