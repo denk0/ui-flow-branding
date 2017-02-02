@@ -9,6 +9,7 @@ import rimraf   from 'rimraf';
 import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
+import webpack  from 'webpack-stream';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -27,6 +28,13 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
+
+gulp.task('webpack', () => {
+  return gulp.src('src/assets/js/appReact.js')
+      .pipe(webpack(require('./webpack.config.js')))
+      .pipe(gulp.dest(PATHS.dist + '/assets/js/'));
+});
+
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
