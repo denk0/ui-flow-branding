@@ -1,7 +1,7 @@
 import path from 'path';
 
-var CLIENT_DIR = path.resolve(__dirname, './src/assets/');
-var SCRIPTS_DIR = path.resolve(__dirname, CLIENT_DIR + '/js/');
+let CLIENT_DIR = path.resolve(__dirname, './src/assets/');
+let SCRIPTS_DIR = path.resolve(__dirname, CLIENT_DIR + '/js/');
 
 
 let config = {
@@ -10,7 +10,7 @@ let config = {
 
     output: {
         path: SCRIPTS_DIR,
-        filename: 'bundle.js'
+        filename: 'appReact.js'
     },
 
     module: {
@@ -34,4 +34,4 @@ let config = {
     },
 }
 
-export default config;
+module.exports = config;

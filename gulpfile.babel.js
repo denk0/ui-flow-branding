@@ -30,7 +30,7 @@ gulp.task('build',
  gulp.series(clean, gulp.parallel(pages, sass, javascript, images, copy), styleGuide));
 
 gulp.task('webpack', () => {
-  return gulp.src('src/assets/js/appReact.js')
+  return gulp.src(PATHS.assets[0] + '/appReact.js')
       .pipe(webpack(require('./webpack.config.js')))
       .pipe(gulp.dest(PATHS.dist + '/assets/js/'));
 });
