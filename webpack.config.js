@@ -4,12 +4,12 @@ let CLIENT_DIR = path.resolve(__dirname, './src/assets/');
 let SCRIPTS_DIR = path.resolve(__dirname, CLIENT_DIR + '/js/');
 
 
-let config = {
+const config = {
 
     entry: SCRIPTS_DIR + '/appReact.js',
 
     output: {
-        path: SCRIPTS_DIR,
+        path: path.resolve('dist/' + SCRIPTS_DIR),
         filename: 'appReact.js'
     },
 
