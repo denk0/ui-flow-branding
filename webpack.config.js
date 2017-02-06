@@ -1,10 +1,12 @@
 import path from 'path';
 
-let CLIENT_DIR = path.resolve(__dirname, './src/assets/');
-let SCRIPTS_DIR = path.resolve(__dirname, CLIENT_DIR + '/js/');
+const CLIENT_DIR = path.resolve(__dirname, './src/assets/');
+const SCRIPTS_DIR = path.resolve(__dirname, CLIENT_DIR + '/js/');
 
 
 const config = {
+
+    devtool: 'source-map',
 
     entry: SCRIPTS_DIR + '/appReact.js',
 
@@ -34,4 +36,4 @@ const config = {
     },
 }
 
-module.exports = config;
+export default config;

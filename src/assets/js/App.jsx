@@ -1,10 +1,10 @@
-import React from "react";
-import {connect} from "react-redux";
-import {bindActionCreators} from "redux";
-import Header from "./core/Header.jsx";
-import Board from "./view/Board.jsx";
-import Footer from "./core/Footer.jsx";
-import * as boardActions from "./redux/actions/boardActions";
+import React from 'react';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import Header from './core/Header.jsx';
+import Board from './view/Board.jsx';
+import Footer from './core/Footer.jsx';
+import * as boardActions from './redux/actions/boardActions';
 
 class App extends React.Component {
 
@@ -13,7 +13,9 @@ class App extends React.Component {
         return (
             <div className="project-main">
                 <Header />
-                <Board  board={board} actions={boardActions}/>
+                <Board
+                    board={board}
+                    actions={boardActions}/>
                 <Footer />
             </div>
         );

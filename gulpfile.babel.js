@@ -10,6 +10,7 @@ import sherpa   from 'style-sherpa';
 import yaml     from 'js-yaml';
 import fs       from 'fs';
 import webpack  from 'webpack-stream';
+import webpackConfig from './webpack.config';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -28,7 +29,7 @@ function loadConfig() {
 
 gulp.task('webpack', () => {
   return gulp.src(PATHS.assets[0] + '/appReact.js')
-      .pipe(webpack(require('./webpack.config.js')))
+      .pipe(webpack(webpackConfig))
       .pipe(gulp.dest(PATHS.dist + '/assets/js/'));
 });
 

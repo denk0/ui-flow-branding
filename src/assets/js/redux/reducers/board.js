@@ -1,12 +1,17 @@
 const initialState = {
-    applications: [],
+    tasks: [],
+    statuses: []
 }
 
 export default function board(state = initialState, action) {
     switch (action.type) {
-        case 'SET_APPLICATIONS':
+        case 'SET_TASKS':
         {
-            return {...state, applications: action.applications};
+            return {...state, tasks: action.tasks};
+        }
+        case 'SET_STATUSES':
+        {
+            return {...state, statuses: action.statuses};
         }
         default: return state;
     }
