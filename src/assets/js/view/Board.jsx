@@ -15,14 +15,12 @@ class Board extends React.Component {
 
         return (
             <div className="content"> {/* board start */}
-                <div className="secondary-navigation">
-                    <Navigation /> {/* project navigation component */}
-                </div>
+                <Navigation /> {/* project navigation component */}
                 <main className="main-content">
                     <Breadcrumbs /> {/* breadcrumbs component */}
                     <StatusList
                         statuses={statuses}
-                        tasks={tasks} />
+                        tasks={tasks}/> {/* status list component */}
                 </main>
             </div>
 

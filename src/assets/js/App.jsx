@@ -11,7 +11,7 @@ class App extends React.Component {
     render() {
         const {board, boardActions} = this.props;
         return (
-            <div className="project-main">
+            <div className="app-container">
                 <Header />
                 <Board
                     board={board}

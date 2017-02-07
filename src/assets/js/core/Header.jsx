@@ -1,10 +1,23 @@
 import React from 'react';
+import CreateTaskModal from '../modals/CreateTaskModal.jsx';
 
 class Header extends React.Component {
+
+    constructor () {
+        super();
+        this.state = {
+            showModal: false
+        };
+    }
+
+    handleOpenModal () {
+        this.setState({ showModal: true });
+    }
 
     render() {
         return (
             <header className="site-header">
+                <CreateTaskModal  isOpen={this.state.showModal} />
                 <div className="row expanded">
                     <div className="title-bar" data-responsive-toggle="primary-menu"
                          data-hide-for="large">
@@ -40,7 +53,7 @@ class Header extends React.Component {
                                         <li><a className="button" href="#">New</a></li>
                                     </ul>
                                 </li>
-                                <li className="menu-text"><a href="#" className="button">Create</a>
+                                <li className="menu-text"><a href="#" onClick={::this.handleOpenModal} className="button">Create</a>
                                 </li>
                             </ul>
                         </div>

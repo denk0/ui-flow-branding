@@ -60,7 +60,7 @@ function pages() {
   return gulp.src('src/pages/**/*.{html,hbs,handlebars}')
     .pipe(panini({
       root: 'src/pages/',
-      layouts: 'src/layouts/react/', // "src/layouts/react/" for react, "src/layouts//" for panini
+      layouts: 'src/layouts/', // "src/layouts/react/" for react, "src/layouts//" for panini
       partials: 'src/partials/',
       data: 'src/data/',
       helpers: 'src/helpers/'
